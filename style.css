@@ -1,16 +1,53 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
 
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
 }
-.navber {
-    width: 100%;
-    background-color: #555;
-    overflow: auto;
+
+nav ul {
+    list-style: none;
+    padding: 0;
 }
-.navber a {
-    float:left;
-    padding: 12px;
-    color: black;
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: #fff;
     text-decoration: none;
-    font-size: 17px;
+}
+
+section {
+    padding: 20px;
+    margin: 10px 0;
+}
+
+.skill-bar {
+    background: #f4f4f4;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.skill {
+    background: #4caf50;
+    height: 30px;
+    line-height: 30px;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.gallery img {
+    width: 30%;
+    margin: 1.66%;
 }
