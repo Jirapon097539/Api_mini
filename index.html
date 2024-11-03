@@ -3,15 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile</title>
+    <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="navber">
-        <a href="#" class="active">HOME</a>
-        <a href="#" class="project">HOME</a>
-        <a href="#">HOME</a>
-        <a href="#" class="about">HOME</a>
-    </div>
+    <header>
+        <h1>Welcome to My Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Your personal information goes here.</p>
+    </section>
+    
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skill-bar">
+            <div class="skill" style="width: 80%;">HTML</div>
+        </div>
+        <div class="skill-bar">
+            <div class="skill" style="width: 70%;">CSS</div>
+        </div>
+        <div class="skill-bar">
+            <div class="skill" style="width: 60%;">JavaScript</div>
+        </div>
+    </section>
+    
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="gallery">
+            <img src="project1.jpg" alt="Project 1">
+            <img src="project2.jpg" alt="Project 2">
+            <img src="project3.jpg" alt="Project 3">
+        </div>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: your_email@example.com</p>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
