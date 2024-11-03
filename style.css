@@ -32,20 +32,7 @@ section {
     margin: 10px 0;
 }
 
-.skill-bar {
-    background: #f4f4f4;
-    border-radius: 5px;
-    margin: 10px 0;
-}
 
-.skill {
-    background: #4caf50;
-    height: 30px;
-    line-height: 30px;
-    color: white;
-    text-align: center;
-    border-radius: 5px;
-}
 
 .gallery img {
     width: 30%;
