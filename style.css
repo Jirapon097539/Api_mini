@@ -33,7 +33,9 @@ section {
     margin: 10px 0;
 }
 
-
+.about{
+    background-color: #3498DB;
+}
 
 .gallery img {
     width: 30%;
