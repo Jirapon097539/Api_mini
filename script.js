@@ -1,5 +1,5 @@
 const dataContainer = document.getElementById("dataContainer"); // ตรวจสอบว่ามี container
-fetch("https://jsonplaceholder.typicode.com/posts")
+fetch("http://api.weatherapi.com/v1/current.json?key=&q=London&aqi=no")
     .then(response => response.json())
     .then(data => {
         data.forEach(post => {
@@ -14,9 +14,7 @@ fetch("https://jsonplaceholder.typicode.com/posts")
 
             // เพิ่มเนื้อหาใน block card
             postCard.innerHTML = `
-                <h3 style="margin: 0; color: #333;">Post ID: ${post.id}</h3>
-                <h4 style="margin: 8px 0; color: #007BFF;">${post.title}</h4>
-                <p style="margin: 0; color: #555;">${post.body}</p>
+                <h3 style="margin: 0; color: #333;">Post ID: ${post.Date}</h3>
             `;
 
             // เพิ่ม block card เข้าใน container
