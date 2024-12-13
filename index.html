@@ -1,13 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Block Card Example</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
+
 <body>
-    <div id="dataContainer" style="width: 60%; margin: auto; padding: 20px;"></div>
+
+    <div class="transbox">
+            <input type="text" name="search" placeholder="Search..">
+            <button class="search-btn"><i class="material-icons">search</i></button>
+    
+
+    <section>
+        <div class="data-locationn">
+            <div class="location">
+                <i class="material-icons">location_on</i>
+                <h4>surin</h4>
+            </div>
+            <h5>sun, 08 Dec</h5>
+        </div>
+
+        <div class="weather-summary-container">
+            <img class="weather-image" src="assets/weather/clouds.svg" alt="" srcset="">
+            <div class="weather-summary-info">
+                <h1 class="temp-txt">29 °C</h1> 
+                <h1 class="temp-txt-clo">Clouds</h1>
+            </div>
+        </div>
+        <div class="data-Hum">
+            <!-- Humidity Section -->
+            <span class="Humidity">
+                <i class="material-icons">water_drop</i>
+                <h4>Humidity</h4>
+                <h4 class="percentage">74 %</h4>
+            </span>
+            
+            <!-- Weather Section -->
+            <div class="Weather">
+                <span class="weather-dust">
+                    <i class="material-icons">air</i>
+                    <h4>Wind Speed</h4>
+                    <h4 class="percentage">4.12 m/s</h4>
+                </span>
+            </div>
+        </div>
+        
+        
+    </section>
+
+    <div class="card-container">
+        <div class="card">
+            <i class="material-icons">cloud</i>
+            <h4>Cloud</h4>
+            <p>Sun, 08 Dec</p>
+        </div>
+        <div class="card">
+            <i class="material-icons">sunny</i>
+            <h4>Sunny</h4>
+            <p>Mon, 09 Dec</p>
+        </div>
+        <div class="card">
+            <i class="material-icons">rainy</i>
+            <h4>Rainy</h4>
+            <p>Tue, 10 Dec</p>
+        </div>
+        <div class="card">
+            <i class="material-icons">snow</i>
+            <h4>Snow</h4>
+            <p>Wed, 11 Dec</p>
+        </div>
+        <div class="card">
+            <i class="material-icons">storm</i>
+            <h4>Stormy</h4>
+            <p>Thu, 12 Dec</p>
+        </div>
+    </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
+
 </html>
