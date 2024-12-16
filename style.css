@@ -1,179 +1,163 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@300;500;700&display=swap');
+
+/* Global Styles */
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'Montserrat', sans-serif;
     color: white;
-    font-family: "Poppins",sans-serif;
-    font-weight: 400;
 }
 
 body {
-    background: url("assets/bg.jpg");
-    background-size: cover;
-    justify-content: center;
-    background-position: center;
-    width: 100%;
-    height: 100dvh;
+    background: url("assets/WEATHER-bg.jpg") no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
-
+    height: 100vh;
+    position: relative;
 }
 
 body::before {
     content: "";
     position: absolute;
     width: 100%;
-    height: 100dvh;
-    background: rgba(0, 0, 0, 0.15);
-    backdrop-filter: blur(15px);
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    z-index: -1;
 }
 
-div.transbox {
-    width: 300px;
-    height: 596px;
-    z-index: 1;
-    background: linear-gradient(to top, rgb(0, 0, 0, 0.15), rgb(255, 255, 255, 0.15));
+.transbox {
+    width:300px;
+    height: 570px;
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 12px;
-    backdrop-filter: blur(15px);
+    backdrop-filter: blur(20px);
     padding: 20px;
 }
 
-input[type=text] {
-    width: 100%;
-    box-sizing: border-box;
-    border: 2px solid transparent;
-    border-radius: 20px;
-    font-size: 500;
-    background: rgba(180, 180, 180, 0.304);
-    padding: 10px 16px ;
-    outline: none;
+/* Search Container */
+.search-container {
     position: relative;
-    transition: 0.25s border;
-    padding-right: 65px;
     margin-bottom: 30px;
 }
 
-input[type=text]::placeholder {
-    color: rgba(255, 255, 255, 0.75);
+.search {
+    width: 100%;
+    padding: 10px 16px;
+    border-radius: 20px;
+    border: 2px solid transparent;
+    background: rgba(255, 255, 255, 0.2);
+    outline: none;
+    transition: border 0.25s;
+    padding-right: 50px;
 }
-input[type=text]:focus {
-    border: 2px solid rgba(0, 0, 0, 0.75);
+.search::placeholder{
+    color: #fff;
+}
+.search:focus {
+    border-color: rgba(255, 255, 255, 0.7);
 }
 
 .search-btn {
     position: absolute;
-    right: 50px;
+    right: 10px;
     top: 50%;
-    transform: translateY(-1200%);
+    transform: translateY(-50%);
     background: none;
-    display: flex;
     border: none;
     cursor: pointer;
+    color: white;
 }
-.data-locationn{
+
+/* Weather Section */
+.weather-info {
+    margin-top: 20px;
+}
+
+.data-locationn {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.location{
-    display: flex;
-    align-items: center;
-    gap: 6px;
-}
-.weather-summary-container{
- 
+.location {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 20px;
 }
-
-.weather-image{
-    width: 135px;
-}
-/* Styling for the overall container */
-.data-Hum {
-    display: flex;
-    justify-content: space-between; 
-    align-items: center; 
-    font-family: 'Roboto', sans-serif;
-    margin-top: 20px;
-}
-
-/* Styling for the Humidity section */
 .Humidity {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-right: 50;
+    justify-content: space-between;
 }
-
-.Humidity i {
-    font-size: 36px;
-    margin-bottom: 10px;
-}
-
-.Humidity h4 {
-    margin: 0;
-}
-/* Styling for the Humidity section */
-.Weather {
+.weather-dust {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+}
+
+.weather-summary-container {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    padding-right: 50;
-}
-
-.Weather i {
-    font-size: 36px;
-    margin-bottom: 10px;
-}
-
-.Weather h4 {
-    margin: 0;
-}
-.card-container {
     margin-top: 20px;
+}
+
+.weather-image {
+    width: 120px;
+}
+.section-message img{
+    width: 250px;
+    margin-top: 50px;
+}
+.data-Hum {
     display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.card-container {
+    display: flex;
+    gap: 10px;
     overflow-x: auto; 
-    gap: 20px; 
-    padding: 10px; 
-    scroll-snap-type: x mandatory; 
-}
-
-.card {
-    background-color: lightblue;
-    width: 100px;
-    height: 150px; 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    scroll-snap-align: start;
-    flex-shrink: 0; 
-}
-
-.card i {
-    font-size: 40px; 
-    margin-bottom: 10px;
-}
-
-.card h4 {
-    margin: 5px 0;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.card p {
-    margin: 0;
-    font-size: 14px;
-    color: #555;
+    margin-top: 20px;
+    padding-bottom: 10px; 
+  
 }
 
 .card-container::-webkit-scrollbar {
-    display: none;
+    height: 8px; /* ความสูงของ scrollbar */
+}
+
+.card-container::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.3); /* สีของ scrollbar thumb ที่จางลง */
+    border-radius: 4px; /* ทำให้ scrollbar เป็นมุมโค้ง */
+}
+
+.card-container::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.5); /* ทำให้ scrollbar ชัดขึ้นเมื่อ hover */
+}
+
+.card-container::-webkit-scrollbar-track {
+    background: transparent; /* พื้นหลังของ scrollbar */
+}
+
+
+.card {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    flex-shrink: 0;
+    width: 100px;
+}
+
+.card img {
+    width: 50px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .transbox {
+        max-width: 300px;
+    }
 }

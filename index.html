@@ -4,85 +4,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Block Card Example</title>
+    <meta name="description" content="Weather Information Card with interactive UI">
+    <title>Weather App</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
-
     <div class="transbox">
-            <input type="text" name="search" placeholder="Search..">
-            <button class="search-btn"><i class="material-icons">search</i></button>
-    
-
-    <section>
-        <div class="data-locationn">
-            <div class="location">
-                <i class="material-icons">location_on</i>
-                <h4>surin</h4>
-            </div>
-            <h5>sun, 08 Dec</h5>
+        <div class="search-container">
+            <input type="text" class="search" placeholder="Search for a city...">
+            <button class="search-btn" aria-label="Search"><i class="material-icons">search</i></button>
         </div>
 
-        <div class="weather-summary-container">
-            <img class="weather-image" src="assets/weather/clouds.svg" alt="" srcset="">
-            <div class="weather-summary-info">
-                <h1 class="temp-txt">29 °C</h1> 
-                <h1 class="temp-txt-clo">Clouds</h1>
+        <!-- Weather Information Section -->
+        <section class="weather-info" style="display: none;">
+            <div class="data-locationn">
+                <div class="location">
+                    <i class="material-icons">location_on</i>
+                    <h4 class="country-txt">jjk</h4>
+                </div>
+                <h5 class="curent-data">Sun, 08 Dec</h5>
             </div>
-        </div>
-        <div class="data-Hum">
-            <!-- Humidity Section -->
-            <span class="Humidity">
-                <i class="material-icons">water_drop</i>
-                <h4>Humidity</h4>
-                <h4 class="percentage">74 %</h4>
-            </span>
+
+            <div class="weather-summary-container">
+                <img class="weather-image" src="assets/weather/clouds.svg" alt="Cloudy Weather Icon">
+                <div class="weather-summary-info">
+                    <h1 class="temp-txt">29 °C</h1>
+                    <h1 class="temp-txt-clo">Clouds</h1>
+                </div>
+            </div>
+
+            <div class="data-Hum">
+                <!-- Humidity Section -->
+                <div class="Humidity">
+                    <i class="material-icons">water_drop</i>
+                    <div>
+                        <h4>Humidity</h4>
+                        <h4 class="percentage">74%</h4>
+                    </div>
+                </div>
             
-            <!-- Weather Section -->
-            <div class="Weather">
-                <span class="weather-dust">
+                <!-- Wind Speed Section -->
+                <div class="weather-dust">
                     <i class="material-icons">air</i>
-                    <h4>Wind Speed</h4>
-                    <h4 class="percentage">4.12 m/s</h4>
-                </span>
+                    <div >
+                        <h4>Wind Speed</h4>
+                        <h4 class="percentage wind-value-text">4.12 m/s</h4>
+                    </div>
+                </div>
             </div>
-        </div>
-        
-        
-    </section>
+            
 
-    <div class="card-container">
-        <div class="card">
-            <i class="material-icons">cloud</i>
-            <h4>Cloud</h4>
-            <p>Sun, 08 Dec</p>
-        </div>
-        <div class="card">
-            <i class="material-icons">sunny</i>
-            <h4>Sunny</h4>
-            <p>Mon, 09 Dec</p>
-        </div>
-        <div class="card">
-            <i class="material-icons">rainy</i>
-            <h4>Rainy</h4>
-            <p>Tue, 10 Dec</p>
-        </div>
-        <div class="card">
-            <i class="material-icons">snow</i>
-            <h4>Snow</h4>
-            <p>Wed, 11 Dec</p>
-        </div>
-        <div class="card">
-            <i class="material-icons">storm</i>
-            <h4>Stormy</h4>
-            <p>Thu, 12 Dec</p>
-        </div>
-    </div>
-    </div>
+            <!-- Weather Forecast Cards -->
+            <div class="card-container forecast-item-container">
+                <div class="card forecast-item">
+                    <div class="weather-day">Mon, 09 Dec</div>
+                    <img class="weather-image-card" src="assets/weather/clouds.svg" alt="Sunny Icon">
+                    <h4>Sunny</h4>
+                    <div class="weather-day-o">29 °C</div>
+                </div>
+                <div class="card forecast-item">
+                    <div class="weather-day">Mon, 09 Dec</div>
+                    <img class="weather-image-card" src="assets/weather/clouds.svg" alt="Sunny Icon">
+                    <h4>Sunny</h4>
+                    <div class="weather-day-o">29 °C</div>
+                </div>
+                <div class="card forecast-item">
+                    <div class="weather-day">Mon, 09 Dec</div>
+                    <img class="weather-image-card" src="assets/weather/clouds.svg" alt="Sunny Icon">
+                    <h4>Sunny</h4>
+                    <div class="weather-day-o">29 °C</div>
+                </div>
+                <div class="card forecast-item">
+                    <div class="weather-day">Mon, 09 Dec</div>
+                    <img class="weather-image-card" src="assets/weather/clouds.svg" alt="Sunny Icon">
+                    <h4>Sunny</h4>
+                    <div class="weather-day-o">29 °C</div>
+                </div>
+                <!-- Duplicate card omitted for brevity -->
+            </div>
+        </section>
 
-    <script src="script.js"></script>
+        <!-- Messages for Search -->
+        <section class="search-city section-message">
+            <img src="assets/message/search-city.png" alt="Search City Illustration">
+            <div>
+                <h1>Search City</h1>
+                <h4 class="regular-txt">Find out the weather condition of the city</h4>
+            </div>
+        </section>
+
+        <section class="not-found section-message" style="display: none;">
+            <img src="assets/message/not-found.png" alt="Not Found Illustration">
+            <div>
+                <h1>City Not Found</h1>
+                <h4 class="regular-txt">We couldn't find the city. Please try again.</h4>
+            </div>
+        </section>
+    </div>
 </body>
 
 </html>
